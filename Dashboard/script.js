@@ -760,7 +760,7 @@ document.addEventListener("click", async function (e) {
       showLocalResult(found);
 
       if (user) {
-        await fetch("https://apna-doctor-f6go.onrender.com/api/records/save", {
+        await fetch("https://apna-doctor-dck2.onrender.com/api/records/save", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -791,7 +791,7 @@ document.addEventListener("click", async function (e) {
     e.target.disabled = true;
 
     try {
-      const res = await fetch("https://apna-doctor-f6go.onrender.com/api/symptom/analyze", {
+      const res = await fetch("https://apna-doctor-dck2.onrender.com/api/symptom/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -850,7 +850,7 @@ document.addEventListener("click", async function (e) {
       }
 
       if (user) {
-        await fetch("https://apna-doctor-f6go.onrender.com/api/records/save", {
+        await fetch("https://apna-doctor-dck2.onrender.com/api/records/save", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -880,7 +880,7 @@ document.addEventListener("click", async function (e) {
 
 async function loadRecords() {
   if (!user) return;
-  const res = await fetch(`https://apna-doctor-f6go.onrender.com/api/records/${user._id}`);
+  const res = await fetch(`https://apna-doctor-dck2.onrender.com/api/records/${user._id}`);
   const records = await res.json();
 
   const container = document.getElementById("recordsList");
@@ -912,7 +912,7 @@ async function loadProfile() {
   if (!user) return;
 
   try {
-    const res = await fetch(`https://apna-doctor-f6go.onrender.com/api/auth/me/${user._id}`);
+    const res = await fetch(`https://apna-doctor-dck2.onrender.com/api/auth/me/${user._id}`);
     const data = await res.json();
 
     document.getElementById("profileName").textContent = data.name || "-";
@@ -921,7 +921,7 @@ async function loadProfile() {
       ? new Date(data.createdAt).toLocaleDateString()
       : "-";
 
-    const recRes = await fetch(`https://apna-doctor-f6go.onrender.com/api/records/${user._id}`);
+    const recRes = await fetch(`https://apna-doctor-dck2.onrender.com/api/records/${user._id}`);
     const records = await recRes.json();
 
     document.getElementById("profileRecordsCount").textContent = records.length || "0";
@@ -972,7 +972,7 @@ async function sendChatMessage() {
   sendBtn.textContent = "Sending...";
 
   try {
-    const res = await fetch("https://apna-doctor-f6go.onrender.com/api/chat/doctor", {
+    const res = await fetch("https://apna-doctor-dck2.onrender.com/api/chat/doctor", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ messages: chatMessages })

@@ -43,8 +43,8 @@ authForm.addEventListener("submit", async (e) => {
   };
 
   const url = isLogin
-    ? "https://apna-doctor-f6go.onrender.com/api/auth/login"
-    : "https://apna-doctor-f6go.onrender.com/api/auth/register";
+    ? "https://apna-doctor-dck2.onrender.com/api/auth/login"
+    : "https://apna-doctor-dck2.onrender.com/api/auth/register";
 
   const res = await fetch(url, {
     method: "POST",

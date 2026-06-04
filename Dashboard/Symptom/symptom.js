@@ -6,7 +6,7 @@ document.getElementById("checkBtn").addEventListener("click", async () => {
     return;
   }
 
-  const res = await fetch("https://apna-doctor-f6go.onrender.com/api/symptom/check", {
+  const res = await fetch("https://apna-doctor-dck2.onrender.com/api/symptom/check", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

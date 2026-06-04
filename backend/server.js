@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 // DB + Server start
-mongoose.connect('mongodb://127.0.0.1:27017/apna_doctor')
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB Connected ✅');
     app.listen(process.env.PORT || 5000, () =>

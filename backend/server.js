@@ -10,8 +10,11 @@ const recordRoutes = require("./routes/record.routes");
 
 const app = express();
 
-// middleware
-app.use(cors());
+// middleware - CORS FIRST
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
 app.use(express.json());
 
 // routes

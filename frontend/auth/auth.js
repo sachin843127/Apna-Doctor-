@@ -59,7 +59,7 @@ authForm.addEventListener("submit", async (e) => {
     localStorage.setItem("userName", data.user.name);
     localStorage.setItem("userId", data.user._id);
 
-    window.location.href = "../../dashboard/index.html";
+    window.location.href = "../../Dashboard/index.html";
   } else {
     alert(data.message);
   }

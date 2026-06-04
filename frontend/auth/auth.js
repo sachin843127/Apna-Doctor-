@@ -43,8 +43,8 @@ authForm.addEventListener("submit", async (e) => {
   };
 
   const url = isLogin
-    ? "http://localhost:5000/api/auth/login"
-    : "http://localhost:5000/api/auth/register";
+    ? "https://apna-doctor-f6go.onrender.com/api/auth/login"
+    : "https://apna-doctor-f6go.onrender.com/api/auth/register";
 
   const res = await fetch(url, {
     method: "POST",
@@ -65,10 +65,11 @@ authForm.addEventListener("submit", async (e) => {
   }
 });
 
-
-
-
-document.getElementById("logoutBtn").addEventListener("click", () => {
-  localStorage.clear();   // token + user clear
-  window.location.href = "../auth/auth.html";
-});
+// Logout handler (if logoutBtn exists in DOM)
+const logoutBtn = document.getElementById("logoutBtn");
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", () => {
+    localStorage.clear();   // token + user clear
+    window.location.href = "../auth/auth.html";
+  });
+}

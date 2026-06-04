@@ -11,7 +11,13 @@ const recordRoutes = require("./routes/record.routes");
 const app = express();
 
 // middleware
-app.use(cors());
+const corsOptions = {
+  origin: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use(express.json());
 
 // routes

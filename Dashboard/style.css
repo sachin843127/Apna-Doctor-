@@ -368,6 +368,157 @@ body {
   gap: 8px
 }
 
+/* Symptom module styles */
+.symptom-container,
+.symptom-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 118, 110, 0.08);
+  max-width: 100%;
+}
+
+.symptom-title,
+.symptom-container h2 {
+  color: #0f766e;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.symptom-subtitle,
+.symptom-container .sub {
+  color: #475569;
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+#symptomInput,
+#symptomText {
+  width: 100%;
+  min-height: 140px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #ccfbf1;
+  background: #f0fdfa;
+  resize: vertical;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #0f172a;
+}
+
+#symptomInput:focus,
+#symptomText:focus {
+  outline: none;
+  border-color: #0f766e;
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.12);
+}
+
+#checkSymptomBtn,
+#checkBtn {
+  margin-top: 16px;
+  background: #0f766e;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 16px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#checkSymptomBtn:hover,
+#checkBtn:hover {
+  background: #115e59;
+  transform: translateY(-1px);
+}
+
+#checkSymptomBtn:disabled,
+#checkBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+#resultBox,
+#symptomOutput {
+  margin-top: 24px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 118, 110, 0.08);
+}
+
+.result-card {
+  margin-top: 20px;
+  padding: 18px;
+  background: #f0fdfa;
+  border-radius: 16px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.result-card h3 {
+  margin: 0 0 10px;
+}
+
+.result-card p,
+.result-card ul {
+  margin: 0;
+  color: #0f172a;
+}
+
+.result-card ul,
+.info-card ul {
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid #ccfbf1;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.info-card h4 {
+  color: #0f766e;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.info-card p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.emergency {
+  margin-top: 18px;
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 16px;
+  border-radius: 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .symptom-card,
+  .symptom-container {
+    padding: 18px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
 .result {
   margin-top: 12px;
   padding: 12px;
